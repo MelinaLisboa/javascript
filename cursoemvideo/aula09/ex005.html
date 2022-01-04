@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros Passos com DOM</title>
+<style>
+    body{
+        background-color: rgb(82, 76, 76);
+        color: white;
+        font: normal 18pt Arial;
+    }
+</style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em Javascript</p>
+    <div id="msg">Clique em mim</div>
+    <script>
+        var p1= window.document.getElementsByTagName('p')[0]
+        document.write("Está escrito assim: " + p1.innerText);     
+        p1.style.color = 'darkblue';
+        var corpo = document.body;
+        corpo.style.backgroundColor = 'purple';
+        //window.document.write(window.document.characterSet);
+        //var d = window.document.getElementById('msg');
+        //d.innerText = "Estou aguardando";
+        //window.document.getElementById('msg').innerText = "Estou aguardando";
+
+        var sel = window.document.querySelector('div#msg');
+        sel.innerHTML = "Usando seletores novos!";
+    </script>
+</body>
+</html>
